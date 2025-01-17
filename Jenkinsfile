@@ -10,7 +10,9 @@ node {
                 sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
             }
         }
-        catch {
+        catch (err) {
+            echo "Caught: ${err}"
+            currentBuild.result = 'FAILURE'
         }
         finnaly {
             junit 'test-reports/results.xml'

@@ -86,7 +86,7 @@ docker-compose down --rmi all
   - type: pipeline
 - configure
   - general
-    - github_project: https://github.com/ariafatah0711/dicoding_7
+    <!-- - github_project: https://github.com/ariafatah0711/dicoding_7 -->
     - pool scm: */2 * * * *
   - pipeline
     - Definition: pipeline script from SCM

@@ -22,8 +22,11 @@ services:
     command: ["--storage-driver", "overlay2"]
 
   jenkins-blueocean:
-    image: myjenkins-blueocean:2.426.2-1
     container_name: jenkins-blueocean
+    image: myjenkins-blueocean:2.426.2-1
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       - DOCKER_HOST=tcp://docker:2376
       - DOCKER_CERT_PATH=/certs/client
@@ -44,11 +47,12 @@ services:
     image: nginx
     container_name: nginx-reverse-proxy
     volumes:
-      - ./nginx:/etc/nginx/sites-avaible
+      - ./nginx/:/etc/nginx/sites-available/
+      - ./nginx/:/etc/nginx/conf.d
     networks:
       - jenkins
     ports:
-      - 9000:9000
+      - 9000:80
 
 volumes:
   jenkins-docker-certs:

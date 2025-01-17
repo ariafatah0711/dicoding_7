@@ -33,6 +33,8 @@ pipeline {
                 }
             }
             steps {
+                sh 'docker info'  // Menampilkan informasi tentang Docker
+                sh 'docker images'  // Menampilkan daftar gambar Docker
                 sh 'pyinstaller --onefile sources/add2vals.py'
             }
             post {

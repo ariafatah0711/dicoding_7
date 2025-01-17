@@ -17,7 +17,13 @@ node {
         }
     }
     withDockerContainer('cdrx/pyinstaller-linux:python2') {
-        stage('Delivery')
-            sh 'pyinstaller --onefile sources/add2vals.py'
+        try {
+            stage('Delivery')
+                sh 'pyinstaller --onefile sources/add2vals.py'
+                archiveArtifacts 'dist/add2vals'
+        } catch (err) {
+            echo "Caught: ${err}"
+            currentBuild.result = 'FAILURE'
+        }
     }
 }

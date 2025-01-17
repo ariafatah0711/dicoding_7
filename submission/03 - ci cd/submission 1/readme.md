@@ -100,3 +100,5 @@ docker-compose down --rmi all
 # if blueocean not in the dashboard, restart the container
 docker restart jenkins-blueocean jenkins-docker
 ```
+
+## images

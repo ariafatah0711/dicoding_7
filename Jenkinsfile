@@ -12,7 +12,7 @@ node {
         } catch (err) {
             echo "Caught: ${err}"
             currentBuild.result = 'FAILURE'
-        } finnaly {
+        } finally {
             junit 'test-reports/results.xml'
         }
     }

@@ -44,7 +44,7 @@ services:
     image: nginx
     container_name: nginx-reverse-proxy
     volumes:
-      - ./nginx:/etc/nginx
+      - ./nginx:/etc/nginx/sites-avaible
     networks:
       - jenkins
     ports:

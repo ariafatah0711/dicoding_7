@@ -102,3 +102,8 @@ docker restart jenkins-blueocean jenkins-docker
 ```
 
 ## images
+- create account
+  ![alt text](docs/images/image.png)
+- manage user
+  ![alt text](docs/images/image-1.png)
+- 

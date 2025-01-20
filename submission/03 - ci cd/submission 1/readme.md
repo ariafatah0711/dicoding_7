@@ -102,8 +102,30 @@ docker restart jenkins-blueocean jenkins-docker
 ```
 
 ## images
-- create account
+- Tampilan halaman “Create an account!” di Jenkins.
   ![alt text](docs/images/image.png)
-- manage user
+- Tampilan halaman “Manage Users” di Jenkins.
   ![alt text](docs/images/image-1.png)
-- 
+- Tampilan halaman “Jenkins Dashboard”.
+  ![alt text](docs/images/image-2.png)
+- Tampilan halaman “Pipelines” di Blue Ocean (react-app dan submission-cicd-pipeline-<usernamedicoding>)
+  ![alt text](docs/images/image-3.png)
+- Tampilan halaman “Activity” di Blue Ocean untuk submission-cicd-pipeline-<usernamedicoding>.
+  ![alt text](docs/images/image-4.png)
+- Tampilan halaman “Detail” dari proses eksekusi pipeline yang terbaru di Blue Ocean untuk submission-cicd-pipeline-<usernamedicoding> (wajib berisi tahapan Build dan Test).
+  ![alt text](docs/images/image-5.png)
+
+## file log.txt
+- [log.txt](./log.txt)
+
+## link github
+- https://github.com/ariafatah0711/dicoding_7
+
+## file nginx
+- [nginx.txt](./nginx.txt)
+
+## docker ps
+![alt text](docs/images/image-7.png)
+
+## build triger
+![alt text](docs/images/image-6.png)

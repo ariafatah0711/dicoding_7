@@ -1,0 +1,83 @@
+Started by user Dicoding Indonesia
+Replayed #8
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ariafatah0711/dicoding_7 # timeout=10
+Fetching upstream changes from https://github.com/ariafatah0711/dicoding_7
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/ariafatah0711/dicoding_7 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a76054981fdcf4dad91f7c6c7ac4c66acc240747 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a76054981fdcf4dad91f7c6c7ac4c66acc240747 # timeout=10
+Commit message: "update"
+ > git rev-list --no-walk a76054981fdcf4dad91f7c6c7ac4c66acc240747 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 3d1b986c94149539ff7441fdf9f066813676c98a8c6b9ee0d1e986ade912b515
+but /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah could not be found among []
+but /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp could not be found among []
+$ docker run -t -d -u 1000:1000 -w /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah -v /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah:/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah:rw,z -v /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp:/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:2-alpine cat
+$ docker top 5d5e0d3d3688269dc5579ac46dc9054cac748f92a5e2aacecd1a0c5ab3ff35df -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ python -m py_compile ./sources/add2vals.py ./sources/calc.py
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 5d5e0d3d3688269dc5579ac46dc9054cac748f92a5e2aacecd1a0c5ab3ff35df
+$ docker rm -f --volumes 5d5e0d3d3688269dc5579ac46dc9054cac748f92a5e2aacecd1a0c5ab3ff35df
+[Pipeline] // withDockerContainer
+[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 3d1b986c94149539ff7441fdf9f066813676c98a8c6b9ee0d1e986ade912b515
+but /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah could not be found among []
+but /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp could not be found among []
+$ docker run -t -d -u 1000:1000 -w /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah -v /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah:/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah:rw,z -v /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp:/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** qnib/pytest cat
+$ docker top 0669a6d496e968d4600a83ab663115e8bb9be0779d07ff7e3eb85b0ad6d7c75e -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
++ py.test --verbose --junit-xml test-reports/results.xml ./sources/test_calc.py
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.14, pytest-3.5.0, py-1.5.3, pluggy-0.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah, inifile:
+plugins: cov-2.5.1
+collecting ... collected 5 items
+
+sources/test_calc.py::TestCalc::test_add_floats PASSED                   [ 20%]
+sources/test_calc.py::TestCalc::test_add_integers PASSED                 [ 40%]
+sources/test_calc.py::TestCalc::test_add_string_and_integer PASSED       [ 60%]
+sources/test_calc.py::TestCalc::test_add_string_and_number PASSED        [ 80%]
+sources/test_calc.py::TestCalc::test_add_strings PASSED                  [100%]
+
+ generated xml file: /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/test-reports/results.xml 
+=========================== 5 passed in 0.01 seconds ===========================
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+$ docker stop --time=1 0669a6d496e968d4600a83ab663115e8bb9be0779d07ff7e3eb85b0ad6d7c75e
+$ docker rm -f --volumes 0669a6d496e968d4600a83ab663115e8bb9be0779d07ff7e3eb85b0ad6d7c75e
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

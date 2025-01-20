@@ -102,6 +102,9 @@ docker restart jenkins-blueocean jenkins-docker
 ```
 
 ## images
+- fitur sign up
+  ![alt text](docs/images/image-8.png)
+  ![alt text](docs/images/image-9.png)
 - Tampilan halaman “Create an account!” di Jenkins.
   ![alt text](docs/images/image.png)
 - Tampilan halaman “Manage Users” di Jenkins.

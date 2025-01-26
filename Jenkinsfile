@@ -1,60 +1,47 @@
-// https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/
-// https://www.jenkins.io/doc/pipeline/examples/
+node {
+    stage('Checkout') {
+        checkout scm
+    }
 
-pipeline {
-    agent any
-    stages {
-        // build
+    docker.image('python:3.9').inside {
+        // Build Stage
         stage('Build') {
-            agent {
-                docker {
-                    image 'python:2-alpine'
-                }
-            }
-            steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py'
-            }
+            sh 'pip install py_compile'
+            sh 'python -m py_compile ./sources/add2vals.py ./sources/calc.py'
         }
-        // test
+
+        // Test Stage
         stage('Test') {
-            agent {
-                docker {
-                    image 'qnib/pytest'
-                }
-            }
-            steps {
-                sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
-            }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
+            try {
+                sh "pip install pytest"
+                sh 'pytest --verbose --junit-xml test-reports/results.xml ./sources/test_calc.py'
+            } catch (err) {
+                echo "Caught: ${err}"
+                currentBuild.result = 'FAILURE'
+            } finally {
+                junit 'test-reports/results.xml'
             }
         }
+
         // Manual Approval
-        stage('Manual Approval') {
+         stage('Manual Approval') {
             steps {
                 input message: 'Apakah Anda ingin melanjutkan ke deploy? (Klik "Proceed" untuk Deploy)'
             }
-        }
+         }
 
-        // Deploy
-        stage('Deploy') { 
-            agent {
-                docker {
-                    image 'python:3.9'
-                    args '--user root'
-                }
-            }
-            steps {
+        // Deploy Stage
+        stage('Deploy') {
+            try {
                 sh "pip install pyinstaller"
-                sh "pyinstaller --onefile sources/add2vals.py" 
+                sh "pyinstaller --onefile sources/add2vals.py"
                 sleep(time:1, unit: "MINUTES")
-            }
-            post {
-                success {
-                    archiveArtifacts 'dist/add2vals' 
-                }
+
+                // Artifacts
+                archiveArtifacts 'dist/add2vals'
+            } catch (err) {
+                echo "Caught: ${err}"
+                currentBuild.result = 'FAILURE'
             }
         }
     }

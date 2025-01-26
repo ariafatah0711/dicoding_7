@@ -47,7 +47,6 @@ pipeline {
                 sh "pyinstaller --onefile sources/add2vals.py" 
                 // sleep(time:1, unit: "MINUTES")
 
-                // sh "apt install sshpass scp -y"
                 sh 'apt-get update && apt-get install -y sshpass sshpass openssh-client'
             }
             post {
@@ -57,10 +56,7 @@ pipeline {
 
                     // deploy to ec2
                     // scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/app_python
-                    // script {
-                    sh 'ls -la'
-                    sh "sshpass -p 'YXJpYQo=' scp dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
-                    // }
+                    sh "sshpass -p 'YXJpYQo=' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
                 }
             }
         }

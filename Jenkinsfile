@@ -1,7 +1,8 @@
 // https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/
+// https://www.jenkins.io/doc/pipeline/examples/
 
 pipeline {
-    agent none
+    agent any
     stages {
         // build
         stage('Build') {
@@ -30,8 +31,18 @@ pipeline {
                 }
             }
         }
-        // Deliver
-        stage('Deliver') { 
+        // Manual Approval
+        stage('Manual Approval') {
+            steps {
+                input message: 'Apakah Anda ingin melanjutkan ke deploy?', 
+                      parameters: [
+                          choice(name: 'Deploy', choices: ['Ya', 'Tidak'], description: 'Pilih "Ya" untuk melanjutkan ke deploy')
+                      ]
+            }
+        }
+
+        // Deploy
+        stage('Deploy') { 
             agent {
                 docker {
                     image 'python:3.9'
@@ -41,6 +52,7 @@ pipeline {
             steps {
                 sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
+                sleep(time:1, unit: "MINUTES")
             }
             post {
                 success {

@@ -30,11 +30,12 @@ pipeline {
                 }
             }
         }
-        // deploy
+        // Deliver
         stage('Deliver') { 
             agent {
                 docker {
                     image 'python:3.9'
+                    args '--user root'
                 }
             }
             steps {

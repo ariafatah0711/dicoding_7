@@ -34,10 +34,7 @@ pipeline {
         // Manual Approval
         stage('Manual Approval') {
             steps {
-                input message: 'Apakah Anda ingin melanjutkan ke deploy?', 
-                      parameters: [
-                          choice(name: 'Deploy', choices: ['Ya', 'Tidak'], description: 'Pilih "Ya" untuk melanjutkan ke deploy')
-                      ]
+                input message: 'Apakah Anda ingin melanjutkan ke deploy? (Klik "Proceed" untuk Deploy)'
             }
         }
 

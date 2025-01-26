@@ -18,6 +18,7 @@ The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial.
 
 - [https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/](https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/)
+- [https://www.jenkins.io/doc/pipeline/examples/](https://www.jenkins.io/doc/pipeline/examples/)
 
 # jenkins
 ## setup jenkins with docker (1)

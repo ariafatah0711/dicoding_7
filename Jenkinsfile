@@ -48,7 +48,7 @@ pipeline {
                 // sleep(time:1, unit: "MINUTES")
 
                 // sh "apt install sshpass scp -y"
-                sh 'apt-get update && apt-get install -y sshpass scp'
+                sh 'apt-get update && apt-get install -y sshpass sshpass openssh-client'
             }
             post {
                 success {

@@ -32,7 +32,13 @@ pipeline {
         }
         // deploy
         stage('Deliver') { 
+            agent {
+                docker {
+                    image 'python:2-alpine'
+                }
+            }
             steps {
+                sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
             }
             post {

@@ -48,12 +48,7 @@ pipeline {
                 // sleep(time:1, unit: "MINUTES")
 
                 // sh "apt install sshpass scp -y"
-                // deploy to ec2
-                script {
-                    docker.image('mikesplain/sshpass').inside {
-                        sh "sshpass -p 'YXJpYQo=' scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
-                    }
-                }
+                sh 'apt-get update && apt-get install -y sshpass scp'
             }
             post {
                 success {
@@ -63,9 +58,7 @@ pipeline {
                     // deploy to ec2
                     // scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/app_python
                     // script {
-                    //     docker.image('mikesplain/sshpass').inside {
-                    //         sh "sshpass -p 'YXJpYQo=' scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
-                    //     }
+                    sh "sshpass -p 'YXJpYQo=' scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
                     // }
                 }
             }

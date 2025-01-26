@@ -43,16 +43,16 @@ services:
       - "50000:50000"
     restart: on-failure
   
-  nginx-reverse-proxy:
-    image: nginx
-    container_name: nginx-reverse-proxy
-    volumes:
-      - ./nginx/:/etc/nginx/sites-available/
-      - ./nginx/:/etc/nginx/conf.d
-    networks:
-      - jenkins
-    ports:
-      - 9000:80
+  # nginx-reverse-proxy:
+  #   image: nginx
+  #   container_name: nginx-reverse-proxy
+  #   volumes:
+  #     - ./nginx/:/etc/nginx/sites-available/
+  #     - ./nginx/:/etc/nginx/conf.d
+  #   networks:
+  #     - jenkins
+  #   ports:
+  #     - 9000:80
 
 volumes:
   jenkins-docker-certs:

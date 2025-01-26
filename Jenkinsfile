@@ -3,7 +3,7 @@ node {
         checkout scm
     }
 
-    docker.image('python:3.9').inside {
+    docker.image('python:3.9').inside('--user root') {
         // Build Stage
         stage('Build') {
             sh 'pip install py_compile'

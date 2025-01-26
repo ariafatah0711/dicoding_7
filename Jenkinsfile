@@ -56,7 +56,7 @@ pipeline {
 
                     // deploy to ec2
                     // scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/app_python
-                    sshpass -p "YXJpYQo=" scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER
+                    sh "sshpass -p 'YXJpYQo=' scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
                 }
             }
         }

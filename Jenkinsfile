@@ -2,6 +2,11 @@
 // https://www.jenkins.io/doc/pipeline/examples/
 
 pipeline {
+    environment {
+        EC2_USER = 'app_python'
+        EC2_IP = '18.215.145.93'
+        // PEM_FILE = './key/id_rsa'
+    }
     agent {
         docker {
             image 'python:3.9'
@@ -41,11 +46,17 @@ pipeline {
                 sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
                 sleep(time:1, unit: "MINUTES")
+
+                sh "apt install sshpass scp -y"
             }
             post {
                 success {
                     // Artifacts
                     archiveArtifacts 'dist/add2vals'
+
+                    // deploy to ec2
+                    // scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/app_python
+                    sshpass -p "YXJpYQo=" scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER
                 }
             }
         }

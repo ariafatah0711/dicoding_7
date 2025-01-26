@@ -98,3 +98,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# key
+*key*
+*.pem
+*.pub

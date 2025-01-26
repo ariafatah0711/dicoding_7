@@ -6,7 +6,6 @@ node {
     docker.image('python:3.9').inside('--user root') {
         // Build Stage
         stage('Build') {
-            sh 'pip install py_compile'
             sh 'python -m py_compile ./sources/add2vals.py ./sources/calc.py'
         }
 

@@ -1,3 +1,5 @@
+// https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/
+
 pipeline {
     agent none
     stages {
@@ -29,15 +31,14 @@ pipeline {
             }
         }
         // deploy
-        stage('Deploy') {
-            agent {
-                docker { image 'docker:20.10' }
-            }
+        stage('Deliver') { 
             steps {
-                sh '''
-                docker build -t my-python-app .
-                docker run -d -p 5000:5000 --name my-python-app-container my-python-app
-                '''
+                sh "pyinstaller --onefile sources/add2vals.py" 
+            }
+            post {
+                success {
+                    archiveArtifacts 'dist/add2vals' 
+                }
             }
         }
     }

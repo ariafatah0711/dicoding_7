@@ -17,6 +17,8 @@ and execute at the command line on Linux machines without Python.
 The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial.
 
+- [https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/](https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/)
+
 # jenkins
 ## setup jenkins with docker (1)
 ### setup container

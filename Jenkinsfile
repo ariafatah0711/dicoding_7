@@ -18,17 +18,20 @@ node {
                 echo "Caught: ${err}"
                 currentBuild.result = 'FAILURE'
             } finally {
+                // report
                 junit 'test-reports/results.xml'
             }
         }
+    }
 
-        // Manual Approval
-         stage('Manual Approval') {
-            steps {
-                input message: 'Apakah Anda ingin melanjutkan ke deploy? (Klik "Proceed" untuk Deploy)'
-            }
-         }
+    // Manual Approval
+    stage('Manual Approval') {
+        steps {
+            input message: 'Apakah Anda ingin melanjutkan ke deploy? (Klik "Proceed" untuk Deploy)'
+        }
+    }
 
+    docker.image('python:3.9').inside('--user root') {
         // Deploy Stage
         stage('Deploy') {
             try {

@@ -31,7 +31,7 @@ pipeline {
         // Manual Approval
         stage('Manual Approval') {
             steps {
-                input message: 'Apakah Anda ingin melanjutkan ke deploy? (Klik "Proceed" untuk Deploy)'
+                input message: 'Lanjutkan ke tahap Deploy?'
             }
         }
 

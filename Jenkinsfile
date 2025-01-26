@@ -56,7 +56,10 @@ pipeline {
 
                     // deploy to ec2
                     // scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/app_python
-                    sh "sshpass -p 'YXJpYQo=' scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
+                    script {
+                    docker.image('mikesplain/sshpass').inside {
+                        sh "sshpass -p 'YXJpYQo=' scp dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
+                    }
                 }
             }
         }

@@ -3,9 +3,10 @@
 
 pipeline {
     environment {
-        EC2_USER = 'app_python'
+        EC2_USER = 'app_python' // dont use user sudoers
         EC2_IP = '18.215.145.93'
         // PEM_FILE = './key/id_rsa'
+        EC2_PASS = 'YXJpYQo='
     }
     agent {
         docker {
@@ -45,7 +46,7 @@ pipeline {
             steps {
                 sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
-                // sleep(time:1, unit: "MINUTES")
+                sleep(time:1, unit: "MINUTES")
 
                 sh 'apt-get update && apt-get install -y sshpass sshpass openssh-client'
             }
@@ -55,8 +56,8 @@ pipeline {
                     archiveArtifacts 'dist/add2vals'
 
                     // deploy to ec2
-                    // scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/app_python
-                    sh "sshpass -p 'YXJpYQo=' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
+                    // sh "scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
+                    sh "sshpass -p '$EC2_PASS' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
                 }
             }
         }

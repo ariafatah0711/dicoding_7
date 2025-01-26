@@ -90,4 +90,16 @@ EOF'
 docker restart prometheus
 ```
 
-## immages
+## check the app
+```bash
+sshpass -p "YXJpYQo=" ssh app_python@18.215.145.93 ls
+sshpass -p "YXJpYQo=" ssh app_python@18.215.145.93 ./add2vals 5 10
+```
+
+## images
+- Sertakan link GitHub repository yang Anda kirim saat Proyek Pertama pada kolom Catatan submission. Pastikan berkas Jenkinsfile tersedia di GitHub repository Anda.
+  - [https://github.com/ariafatah0711/dicoding_7](https://github.com/ariafatah0711/dicoding_7)
+- Tampilan halaman “Jenkins Dashboard”.
+  ![alt text](docs/images/image.png)
+- Tampilan halaman “Detail” dari proses eksekusi pipeline yang terbaru di Blue Ocean (wajib berisi tahapan Build, Test, Manual Approval, dan Deploy).
+  

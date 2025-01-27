@@ -58,8 +58,8 @@ pipeline {
 
                     // deploy to ec2
                     // sh "scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
-                    sh 'ssh-keygen -t rsa -b 2048 -f /tmp/id_rsa -N ""'
-                    sh "sshpass -p '$EC2_PASS' ssh-copy-id -i /tmp/id_rsa.pub -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP"
+                    sh 'ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""'
+                    sh "sshpass -p '$EC2_PASS' ssh-copy-id -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP"
                     sh "scp -i /tmp/id_rsa dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
 
                     // sh "sshpass -p '$EC2_PASS' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"

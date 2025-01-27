@@ -46,7 +46,7 @@ pipeline {
             steps {
                 sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
-                // sleep(time:1, unit: "MINUTES")
+                sleep(time:1, unit: "MINUTES")
 
                 sh 'apt-get update && apt-get install -y sshpass sshpass openssh-client'
             }

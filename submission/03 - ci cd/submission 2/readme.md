@@ -125,7 +125,7 @@ sshpass -p "YXJpYQo=" ssh -o StrictHostKeyChecking=no app_python@$ip ./add2vals 
 - Tampilan menu “Metric Explorer” pada halaman Prometheus
   ![alt text](docs/images/image-3.png)
 - Tampilan “Grafana dashboard” yang Anda buat untuk Jenkins metrics.
-  ![alt text](docs/images/image-6.png)
+  ![alt text](docs/images/image-4.png)
 
 ## more
 - Lampirkan berkas log.txt yang Anda unduh dari halaman Artifacts pada Blue Ocean.

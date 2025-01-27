@@ -138,3 +138,4 @@ sshpass -p "YXJpYQo=" ssh -o StrictHostKeyChecking=no app_python@$ip ./add2vals 
 - Lampirkan berkas System log dari EC2 instance Anda. Berkas ini dapat diunduh dari halaman EC2 -> Instances -> centang instance Anda -> Actions -> Monitor and troubleshoot -> Get system log -> Download. Itu akan mengunduh sebuah berkas dengan nama <instanceID>.log.
   - [./i-0b31d91e222b12802.log](./i-0b31d91e222b12802.log)
   - [./auth-sshd.log](./auth-sshd.log)
+  - [./syslog](./syslog)

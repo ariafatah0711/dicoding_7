@@ -47,7 +47,7 @@ pipeline {
             steps {
                 sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
-                // sleep(time:1, unit: "MINUTES")
+                sleep(time:1, unit: "MINUTES")
 
                 sh 'apt-get update && apt-get install -y sshpass sshpass openssh-client'
             }
@@ -57,7 +57,6 @@ pipeline {
                     archiveArtifacts 'dist/add2vals'
 
                     // deploy to ec2
-                    // sh "scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
                     sh 'ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""'
                     sh "sshpass -p '$EC2_PASS' ssh-copy-id -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP"
                     sh "scp dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"

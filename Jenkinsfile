@@ -4,8 +4,7 @@
 pipeline {
     environment {
         EC2_USER = 'app_python' // dont use user sudoers
-        // EC2_IP = 'ec2-54-242-218-252.compute-1.amazonaws.com'
-        EC2_IP = 'ec2-184-73-117-105.compute-1.amazonaws.com'
+        EC2_IP = 'ec2-3-93-59-151.compute-1.amazonaws.com'
         // PEM_FILE = './key/id_rsa'
         EC2_PASS = 'YXJpYQo='
     }

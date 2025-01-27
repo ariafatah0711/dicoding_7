@@ -58,6 +58,7 @@ pipeline {
                     // deploy to ec2
                     sh 'ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""'
                     sh "sshpass -p '$EC2_PASS' ssh-copy-id -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP"
+                    sh "ssh $EC2_USER@$EC2_IP logger 'Mengirim file dist/add2vals ke server $EC2_USER@$EC2_IP'" // logger
                     sh "scp dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
 
                     // sh "sshpass -p '$EC2_PASS' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"

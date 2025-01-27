@@ -2102,3 +2102,233 @@
 2025-01-27T08:50:01.240320+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
 2025-01-27T08:50:01.246046+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
 2025-01-27T08:50:01.246136+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-01-27T08:51:09.028687+00:00 ip-172-31-27-153 systemd[1]: Created slice user-1001.slice - User Slice of UID 1001.
+2025-01-27T08:51:09.034174+00:00 ip-172-31-27-153 systemd[1]: Starting user-runtime-dir@1001.service - User Runtime Directory /run/user/1001...
+2025-01-27T08:51:09.049354+00:00 ip-172-31-27-153 systemd[1]: Finished user-runtime-dir@1001.service - User Runtime Directory /run/user/1001.
+2025-01-27T08:51:09.055496+00:00 ip-172-31-27-153 systemd[1]: Starting user@1001.service - User Manager for UID 1001...
+2025-01-27T08:51:09.114591+00:00 ip-172-31-27-153 systemd[5499]: Queued start job for default target default.target.
+2025-01-27T08:51:09.118735+00:00 ip-172-31-27-153 systemd[5499]: Created slice app.slice - User Application Slice.
+2025-01-27T08:51:09.118789+00:00 ip-172-31-27-153 systemd[5499]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+2025-01-27T08:51:09.118825+00:00 ip-172-31-27-153 systemd[5499]: Reached target paths.target - Paths.
+2025-01-27T08:51:09.118857+00:00 ip-172-31-27-153 systemd[5499]: Reached target timers.target - Timers.
+2025-01-27T08:51:09.119549+00:00 ip-172-31-27-153 systemd[5499]: Starting dbus.socket - D-Bus User Message Bus Socket...
+2025-01-27T08:51:09.121044+00:00 ip-172-31-27-153 systemd[5499]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+2025-01-27T08:51:09.121558+00:00 ip-172-31-27-153 systemd[5499]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2025-01-27T08:51:09.121615+00:00 ip-172-31-27-153 systemd[5499]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+2025-01-27T08:51:09.127217+00:00 ip-172-31-27-153 systemd[5499]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+2025-01-27T08:51:09.127393+00:00 ip-172-31-27-153 systemd[5499]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+2025-01-27T08:51:09.127811+00:00 ip-172-31-27-153 systemd[5499]: Listening on keyboxd.socket - GnuPG public key management service.
+2025-01-27T08:51:09.127888+00:00 ip-172-31-27-153 systemd[5499]: Listening on pk-debconf-helper.socket - debconf communication socket.
+2025-01-27T08:51:09.127919+00:00 ip-172-31-27-153 systemd[5499]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+2025-01-27T08:51:09.138600+00:00 ip-172-31-27-153 systemd[5499]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+2025-01-27T08:51:09.151551+00:00 ip-172-31-27-153 systemd[5499]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+2025-01-27T08:51:09.152244+00:00 ip-172-31-27-153 systemd[5499]: Reached target sockets.target - Sockets.
+2025-01-27T08:51:09.152418+00:00 ip-172-31-27-153 systemd[5499]: Reached target basic.target - Basic System.
+2025-01-27T08:51:09.152509+00:00 ip-172-31-27-153 systemd[5499]: Reached target default.target - Main User Target.
+2025-01-27T08:51:09.152558+00:00 ip-172-31-27-153 systemd[5499]: Startup finished in 86ms.
+2025-01-27T08:51:09.152685+00:00 ip-172-31-27-153 systemd[1]: Started user@1001.service - User Manager for UID 1001.
+2025-01-27T08:51:09.156541+00:00 ip-172-31-27-153 systemd[1]: Started session-54.scope - Session 54 of User app_python.
+2025-01-27T08:51:12.030832+00:00 ip-172-31-27-153 systemd[1]: session-54.scope: Deactivated successfully.
+2025-01-27T08:51:22.234258+00:00 ip-172-31-27-153 systemd[1]: Stopping user@1001.service - User Manager for UID 1001...
+2025-01-27T08:51:22.236255+00:00 ip-172-31-27-153 systemd[5499]: Activating special unit exit.target...
+2025-01-27T08:51:22.237576+00:00 ip-172-31-27-153 systemd[5499]: Stopped target default.target - Main User Target.
+2025-01-27T08:51:22.237805+00:00 ip-172-31-27-153 systemd[5499]: Stopped target basic.target - Basic System.
+2025-01-27T08:51:22.237840+00:00 ip-172-31-27-153 systemd[5499]: Stopped target paths.target - Paths.
+2025-01-27T08:51:22.237873+00:00 ip-172-31-27-153 systemd[5499]: Stopped target sockets.target - Sockets.
+2025-01-27T08:51:22.237904+00:00 ip-172-31-27-153 systemd[5499]: Stopped target timers.target - Timers.
+2025-01-27T08:51:22.237936+00:00 ip-172-31-27-153 systemd[5499]: Stopped launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+2025-01-27T08:51:22.237963+00:00 ip-172-31-27-153 systemd[5499]: Closed dbus.socket - D-Bus User Message Bus Socket.
+2025-01-27T08:51:22.237992+00:00 ip-172-31-27-153 systemd[5499]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+2025-01-27T08:51:22.238024+00:00 ip-172-31-27-153 systemd[5499]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2025-01-27T08:51:22.238052+00:00 ip-172-31-27-153 systemd[5499]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+2025-01-27T08:51:22.241956+00:00 ip-172-31-27-153 systemd[5499]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+2025-01-27T08:51:22.242316+00:00 ip-172-31-27-153 systemd[5499]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+2025-01-27T08:51:22.243754+00:00 ip-172-31-27-153 systemd[5499]: Closed keyboxd.socket - GnuPG public key management service.
+2025-01-27T08:51:22.244148+00:00 ip-172-31-27-153 systemd[5499]: Closed pk-debconf-helper.socket - debconf communication socket.
+2025-01-27T08:51:22.246113+00:00 ip-172-31-27-153 systemd[5499]: Closed snapd.session-agent.socket - REST API socket for snapd user session agent.
+2025-01-27T08:51:22.265400+00:00 ip-172-31-27-153 systemd[5499]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+2025-01-27T08:51:22.266842+00:00 ip-172-31-27-153 systemd[5499]: Removed slice app.slice - User Application Slice.
+2025-01-27T08:51:22.266943+00:00 ip-172-31-27-153 systemd[5499]: Reached target shutdown.target - Shutdown.
+2025-01-27T08:51:22.267100+00:00 ip-172-31-27-153 systemd[5499]: Finished systemd-exit.service - Exit the Session.
+2025-01-27T08:51:22.267188+00:00 ip-172-31-27-153 systemd[5499]: Reached target exit.target - Exit the Session.
+2025-01-27T08:51:22.276624+00:00 ip-172-31-27-153 systemd[1]: user@1001.service: Deactivated successfully.
+2025-01-27T08:51:22.276970+00:00 ip-172-31-27-153 systemd[1]: Stopped user@1001.service - User Manager for UID 1001.
+2025-01-27T08:51:22.287490+00:00 ip-172-31-27-153 systemd[1]: Stopping user-runtime-dir@1001.service - User Runtime Directory /run/user/1001...
+2025-01-27T08:51:22.291196+00:00 ip-172-31-27-153 systemd[1]: run-user-1001.mount: Deactivated successfully.
+2025-01-27T08:51:22.294275+00:00 ip-172-31-27-153 systemd[1]: user-runtime-dir@1001.service: Deactivated successfully.
+2025-01-27T08:51:22.294500+00:00 ip-172-31-27-153 systemd[1]: Stopped user-runtime-dir@1001.service - User Runtime Directory /run/user/1001.
+2025-01-27T08:51:22.296761+00:00 ip-172-31-27-153 systemd[1]: Removed slice user-1001.slice - User Slice of UID 1001.
+2025-01-27T08:55:01.443754+00:00 ip-172-31-27-153 CRON[5582]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-01-27T09:00:15.241601+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-01-27T09:00:15.247089+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-01-27T09:00:15.247185+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-01-27T09:05:01.456686+00:00 ip-172-31-27-153 CRON[5596]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-01-27T09:10:15.241063+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-01-27T09:10:15.248553+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-01-27T09:10:15.249638+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-01-27T09:15:01.459610+00:00 ip-172-31-27-153 CRON[5608]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-01-27T09:16:02.639706+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: 2025-01-27 09:16:02.6369 WARN EC2RoleProvider Failed to connect to Systems Manager with instance profile role credentials. Err: retrieved credentials failed to report to ssm. Error: EC2RoleRequestError: no EC2 instance role found
+2025-01-27T09:16:02.643607+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: caused by: EC2MetadataError: failed to make EC2Metadata request
+2025-01-27T09:16:02.643683+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: <?xml version="1.0" encoding="iso-8859-1"?>
+2025-01-27T09:16:02.643716+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+2025-01-27T09:16:02.643744+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: #011#011 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2025-01-27T09:16:02.643773+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+2025-01-27T09:16:02.643801+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  <head>
+2025-01-27T09:16:02.643831+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:   <title>404 - Not Found</title>
+2025-01-27T09:16:02.643859+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  </head>
+2025-01-27T09:16:02.643887+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  <body>
+2025-01-27T09:16:02.643914+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:   <h1>404 - Not Found</h1>
+2025-01-27T09:16:02.643942+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  </body>
+2025-01-27T09:16:02.643969+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: </html>
+2025-01-27T09:16:02.643997+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: #011status code: 404, request id:
+2025-01-27T09:16:02.740090+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: 2025-01-27 09:16:02.6764 ERROR EC2RoleProvider Failed to connect to Systems Manager with SSM role credentials. error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 311141548364
+2025-01-27T09:16:02.740231+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: #011status code: 400, request id: c643b0ec-66fd-4854-9146-2aa45c575aef
+2025-01-27T09:16:17.775112+00:00 ip-172-31-27-153 systemd[1]: session-2.scope: Deactivated successfully.
+2025-01-27T09:16:17.775185+00:00 ip-172-31-27-153 systemd[1]: session-2.scope: Consumed 4.623s CPU time.
+2025-01-27T09:16:27.984427+00:00 ip-172-31-27-153 systemd[1]: Stopping user@1000.service - User Manager for UID 1000...
+2025-01-27T09:16:27.987630+00:00 ip-172-31-27-153 systemd[1392]: Activating special unit exit.target...
+2025-01-27T09:16:27.987716+00:00 ip-172-31-27-153 systemd[1392]: Stopped target default.target - Main User Target.
+2025-01-27T09:16:27.987763+00:00 ip-172-31-27-153 systemd[1392]: Stopped target basic.target - Basic System.
+2025-01-27T09:16:27.987798+00:00 ip-172-31-27-153 systemd[1392]: Stopped target paths.target - Paths.
+2025-01-27T09:16:27.987834+00:00 ip-172-31-27-153 systemd[1392]: Stopped target sockets.target - Sockets.
+2025-01-27T09:16:27.987865+00:00 ip-172-31-27-153 systemd[1392]: Stopped target timers.target - Timers.
+2025-01-27T09:16:27.987895+00:00 ip-172-31-27-153 systemd[1392]: Stopped launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+2025-01-27T09:16:27.987928+00:00 ip-172-31-27-153 systemd[1392]: Closed dbus.socket - D-Bus User Message Bus Socket.
+2025-01-27T09:16:27.987958+00:00 ip-172-31-27-153 systemd[1392]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+2025-01-27T09:16:27.987991+00:00 ip-172-31-27-153 systemd[1392]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2025-01-27T09:16:27.988023+00:00 ip-172-31-27-153 systemd[1392]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+2025-01-27T09:16:27.995154+00:00 ip-172-31-27-153 systemd[1392]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+2025-01-27T09:16:27.995361+00:00 ip-172-31-27-153 systemd[1392]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+2025-01-27T09:16:27.995536+00:00 ip-172-31-27-153 systemd[1392]: Closed keyboxd.socket - GnuPG public key management service.
+2025-01-27T09:16:27.996173+00:00 ip-172-31-27-153 systemd[1392]: Closed pk-debconf-helper.socket - debconf communication socket.
+2025-01-27T09:16:27.996289+00:00 ip-172-31-27-153 systemd[1392]: Closed snapd.session-agent.socket - REST API socket for snapd user session agent.
+2025-01-27T09:16:28.015162+00:00 ip-172-31-27-153 systemd[1392]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+2025-01-27T09:16:28.016896+00:00 ip-172-31-27-153 systemd[1392]: Removed slice app.slice - User Application Slice.
+2025-01-27T09:16:28.017011+00:00 ip-172-31-27-153 systemd[1392]: Reached target shutdown.target - Shutdown.
+2025-01-27T09:16:28.017178+00:00 ip-172-31-27-153 systemd[1392]: Finished systemd-exit.service - Exit the Session.
+2025-01-27T09:16:28.017274+00:00 ip-172-31-27-153 systemd[1392]: Reached target exit.target - Exit the Session.
+2025-01-27T09:16:28.025537+00:00 ip-172-31-27-153 systemd[1]: user@1000.service: Deactivated successfully.
+2025-01-27T09:16:28.025698+00:00 ip-172-31-27-153 systemd[1]: Stopped user@1000.service - User Manager for UID 1000.
+2025-01-27T09:16:28.047048+00:00 ip-172-31-27-153 systemd[1]: Stopping user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+2025-01-27T09:16:28.053038+00:00 ip-172-31-27-153 systemd[1]: run-user-1000.mount: Deactivated successfully.
+2025-01-27T09:16:28.054304+00:00 ip-172-31-27-153 systemd[1]: user-runtime-dir@1000.service: Deactivated successfully.
+2025-01-27T09:16:28.054574+00:00 ip-172-31-27-153 systemd[1]: Stopped user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+2025-01-27T09:16:28.056313+00:00 ip-172-31-27-153 systemd[1]: Removed slice user-1000.slice - User Slice of UID 1000.
+2025-01-27T09:16:28.056504+00:00 ip-172-31-27-153 systemd[1]: user-1000.slice: Consumed 4.785s CPU time.
+2025-01-27T09:17:01.466510+00:00 ip-172-31-27-153 CRON[5625]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2025-01-27T09:20:15.239096+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-01-27T09:20:15.245423+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-01-27T09:20:15.245687+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-01-27T09:20:31.667260+00:00 ip-172-31-27-153 systemd[1]: Created slice user-1001.slice - User Slice of UID 1001.
+2025-01-27T09:20:31.676477+00:00 ip-172-31-27-153 systemd[1]: Starting user-runtime-dir@1001.service - User Runtime Directory /run/user/1001...
+2025-01-27T09:20:31.683058+00:00 ip-172-31-27-153 systemd[1]: Finished user-runtime-dir@1001.service - User Runtime Directory /run/user/1001.
+2025-01-27T09:20:31.690079+00:00 ip-172-31-27-153 systemd[1]: Starting user@1001.service - User Manager for UID 1001...
+2025-01-27T09:20:31.752587+00:00 ip-172-31-27-153 systemd[5648]: Queued start job for default target default.target.
+2025-01-27T09:20:31.756449+00:00 ip-172-31-27-153 systemd[5648]: Created slice app.slice - User Application Slice.
+2025-01-27T09:20:31.756549+00:00 ip-172-31-27-153 systemd[5648]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+2025-01-27T09:20:31.756605+00:00 ip-172-31-27-153 systemd[5648]: Reached target paths.target - Paths.
+2025-01-27T09:20:31.756658+00:00 ip-172-31-27-153 systemd[5648]: Reached target timers.target - Timers.
+2025-01-27T09:20:31.756784+00:00 ip-172-31-27-153 systemd[5648]: Starting dbus.socket - D-Bus User Message Bus Socket...
+2025-01-27T09:20:31.759480+00:00 ip-172-31-27-153 systemd[5648]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+2025-01-27T09:20:31.759567+00:00 ip-172-31-27-153 systemd[5648]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2025-01-27T09:20:31.759668+00:00 ip-172-31-27-153 systemd[5648]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+2025-01-27T09:20:31.762562+00:00 ip-172-31-27-153 systemd[5648]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+2025-01-27T09:20:31.762740+00:00 ip-172-31-27-153 systemd[5648]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+2025-01-27T09:20:31.763198+00:00 ip-172-31-27-153 systemd[5648]: Listening on keyboxd.socket - GnuPG public key management service.
+2025-01-27T09:20:31.763536+00:00 ip-172-31-27-153 systemd[5648]: Listening on pk-debconf-helper.socket - debconf communication socket.
+2025-01-27T09:20:31.763593+00:00 ip-172-31-27-153 systemd[5648]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+2025-01-27T09:20:31.783678+00:00 ip-172-31-27-153 systemd[5648]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+2025-01-27T09:20:31.790219+00:00 ip-172-31-27-153 systemd[5648]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+2025-01-27T09:20:31.790306+00:00 ip-172-31-27-153 systemd[5648]: Reached target sockets.target - Sockets.
+2025-01-27T09:20:31.790341+00:00 ip-172-31-27-153 systemd[5648]: Reached target basic.target - Basic System.
+2025-01-27T09:20:31.790372+00:00 ip-172-31-27-153 systemd[1]: Started user@1001.service - User Manager for UID 1001.
+2025-01-27T09:20:31.792405+00:00 ip-172-31-27-153 systemd[5648]: Reached target default.target - Main User Target.
+2025-01-27T09:20:31.792691+00:00 ip-172-31-27-153 systemd[5648]: Startup finished in 90ms.
+2025-01-27T09:20:31.797062+00:00 ip-172-31-27-153 systemd[1]: Started session-60.scope - Session 60 of User app_python.
+2025-01-27T09:22:34.222605+00:00 ip-172-31-27-153 app_python: test
+2025-01-27T09:24:51.857402+00:00 ip-172-31-27-153 systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+2025-01-27T09:24:51.861876+00:00 ip-172-31-27-153 systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+2025-01-27T09:24:51.879482+00:00 ip-172-31-27-153 systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+2025-01-27T09:24:51.885873+00:00 ip-172-31-27-153 systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+2025-01-27T09:24:51.945541+00:00 ip-172-31-27-153 systemd[6080]: Queued start job for default target default.target.
+2025-01-27T09:24:51.949108+00:00 ip-172-31-27-153 systemd[6080]: Created slice app.slice - User Application Slice.
+2025-01-27T09:24:51.951507+00:00 ip-172-31-27-153 systemd[6080]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+2025-01-27T09:24:51.951599+00:00 ip-172-31-27-153 systemd[6080]: Reached target paths.target - Paths.
+2025-01-27T09:24:51.951766+00:00 ip-172-31-27-153 systemd[6080]: Reached target timers.target - Timers.
+2025-01-27T09:24:51.951947+00:00 ip-172-31-27-153 systemd[6080]: Starting dbus.socket - D-Bus User Message Bus Socket...
+2025-01-27T09:24:51.952599+00:00 ip-172-31-27-153 systemd[6080]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+2025-01-27T09:24:51.952766+00:00 ip-172-31-27-153 systemd[6080]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2025-01-27T09:24:51.953782+00:00 ip-172-31-27-153 systemd[6080]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+2025-01-27T09:24:51.958625+00:00 ip-172-31-27-153 systemd[6080]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+2025-01-27T09:24:51.958808+00:00 ip-172-31-27-153 systemd[6080]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+2025-01-27T09:24:51.958974+00:00 ip-172-31-27-153 systemd[6080]: Listening on keyboxd.socket - GnuPG public key management service.
+2025-01-27T09:24:51.959107+00:00 ip-172-31-27-153 systemd[6080]: Listening on pk-debconf-helper.socket - debconf communication socket.
+2025-01-27T09:24:51.959374+00:00 ip-172-31-27-153 systemd[6080]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+2025-01-27T09:24:51.972494+00:00 ip-172-31-27-153 systemd[6080]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+2025-01-27T09:24:51.984188+00:00 ip-172-31-27-153 systemd[6080]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+2025-01-27T09:24:51.984416+00:00 ip-172-31-27-153 systemd[6080]: Reached target sockets.target - Sockets.
+2025-01-27T09:24:51.985098+00:00 ip-172-31-27-153 systemd[6080]: Reached target basic.target - Basic System.
+2025-01-27T09:24:51.985140+00:00 ip-172-31-27-153 systemd[6080]: Reached target default.target - Main User Target.
+2025-01-27T09:24:51.985176+00:00 ip-172-31-27-153 systemd[6080]: Startup finished in 89ms.
+2025-01-27T09:24:51.985212+00:00 ip-172-31-27-153 systemd[1]: Started user@1000.service - User Manager for UID 1000.
+2025-01-27T09:24:51.986575+00:00 ip-172-31-27-153 systemd[1]: Started session-62.scope - Session 62 of User ubuntu.
+2025-01-27T09:24:52.586208+00:00 ip-172-31-27-153 app_python: test
+2025-01-27T09:24:53.184246+00:00 ip-172-31-27-153 app_python: test
+2025-01-27T09:24:53.905614+00:00 ip-172-31-27-153 app_python: message repeated 2 times: [ test]
+2025-01-27T09:25:01.474615+00:00 ip-172-31-27-153 CRON[6177]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-01-27T09:26:15.233689+00:00 ip-172-31-27-153 systemd[5648]: launchpadlib-cache-clean.service - Clean up old files in the Launchpadlib cache was skipped because of an unmet condition check (ConditionPathExists=/home/app_python/.launchpadlib/api.launchpad.net/cache).
+2025-01-27T09:30:13.774082+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-01-27T09:30:13.781343+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-01-27T09:30:13.782487+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-01-27T09:30:15.233796+00:00 ip-172-31-27-153 systemd[6080]: launchpadlib-cache-clean.service - Clean up old files in the Launchpadlib cache was skipped because of an unmet condition check (ConditionPathExists=/home/ubuntu/.launchpadlib/api.launchpad.net/cache).
+2025-01-27T09:30:25.503189+00:00 ip-172-31-27-153 systemd[1]: Started session-65.scope - Session 65 of User app_python.
+2025-01-27T09:30:26.842728+00:00 ip-172-31-27-153 systemd[1]: session-65.scope: Deactivated successfully.
+2025-01-27T09:30:29.660346+00:00 ip-172-31-27-153 systemd[1]: Started session-66.scope - Session 66 of User app_python.
+2025-01-27T09:30:30.469619+00:00 ip-172-31-27-153 app_python: Mengirim file dist/add2vals ke server app_python@ec2-3-93-59-151.compute-1.amazonaws.com
+2025-01-27T09:30:30.709663+00:00 ip-172-31-27-153 systemd[1]: session-66.scope: Deactivated successfully.
+2025-01-27T09:30:33.406022+00:00 ip-172-31-27-153 systemd[1]: Started session-67.scope - Session 67 of User app_python.
+2025-01-27T09:31:45.037665+00:00 ip-172-31-27-153 systemd[1]: session-67.scope: Deactivated successfully.
+2025-01-27T09:35:01.483712+00:00 ip-172-31-27-153 CRON[6437]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-01-27T09:38:02.440478+00:00 ip-172-31-27-153 systemd[1]: Started session-69.scope - Session 69 of User app_python.
+2025-01-27T09:38:03.750777+00:00 ip-172-31-27-153 systemd[1]: session-69.scope: Deactivated successfully.
+2025-01-27T09:38:06.319679+00:00 ip-172-31-27-153 systemd[1]: Started session-70.scope - Session 70 of User app_python.
+2025-01-27T09:38:07.290831+00:00 ip-172-31-27-153 app_python: Mengirim file dist/add2vals ke server app_python@ec2-3-93-59-151.compute-1.amazonaws.com from Jenkins
+2025-01-27T09:38:07.689818+00:00 ip-172-31-27-153 systemd[1]: session-70.scope: Deactivated successfully.
+2025-01-27T09:38:11.254273+00:00 ip-172-31-27-153 systemd[1]: Started session-71.scope - Session 71 of User app_python.
+2025-01-27T09:39:15.238832+00:00 ip-172-31-27-153 systemd[1]: Starting fwupd-refresh.service - Refresh fwupd metadata and update motd...
+2025-01-27T09:39:15.265354+00:00 ip-172-31-27-153 dbus-daemon[589]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.126' (uid=990 pid=6666 comm="/usr/bin/fwupdmgr refresh" label="unconfined")
+2025-01-27T09:39:15.275720+00:00 ip-172-31-27-153 systemd[1]: Starting fwupd.service - Firmware update daemon...
+2025-01-27T09:39:15.359671+00:00 ip-172-31-27-153 fwupd[6671]: 09:39:15.359 FuMain               Daemon ready for requests (locale C.UTF-8)
+2025-01-27T09:39:15.361413+00:00 ip-172-31-27-153 dbus-daemon[589]: [system] Successfully activated service 'org.freedesktop.fwupd'
+2025-01-27T09:39:15.361487+00:00 ip-172-31-27-153 systemd[1]: Started fwupd.service - Firmware update daemon.
+2025-01-27T09:39:15.363476+00:00 ip-172-31-27-153 fwupd[6671]: 09:39:15.363 FuPluginLinuxSleep   could not open /sys/power/mem_sleep: Error opening file /sys/power/mem_sleep: No such file or directory
+2025-01-27T09:39:15.373198+00:00 ip-172-31-27-153 systemd[1]: fwupd-refresh.service: Deactivated successfully.
+2025-01-27T09:39:15.374289+00:00 ip-172-31-27-153 systemd[1]: Finished fwupd-refresh.service - Refresh fwupd metadata and update motd.
+2025-01-27T09:39:38.084307+00:00 ip-172-31-27-153 systemd[1]: session-71.scope: Deactivated successfully.
+2025-01-27T09:39:45.215066+00:00 ip-172-31-27-153 systemd[1]: Started session-72.scope - Session 72 of User app_python.
+2025-01-27T09:39:46.106730+00:00 ip-172-31-27-153 app_python: File Berhasil dikirim ke app_python@ec2-3-93-59-151.compute-1.amazonaws.com
+2025-01-27T09:39:46.391121+00:00 ip-172-31-27-153 systemd[1]: session-72.scope: Deactivated successfully.
+2025-01-27T09:40:15.241503+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-01-27T09:40:15.246189+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-01-27T09:40:15.246809+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-01-27T09:42:40.681060+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: 2025-01-27 09:42:40.6785 WARN EC2RoleProvider Failed to connect to Systems Manager with instance profile role credentials. Err: retrieved credentials failed to report to ssm. Error: EC2RoleRequestError: no EC2 instance role found
+2025-01-27T09:42:40.681300+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: caused by: EC2MetadataError: failed to make EC2Metadata request
+2025-01-27T09:42:40.681518+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: <?xml version="1.0" encoding="iso-8859-1"?>
+2025-01-27T09:42:40.681536+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+2025-01-27T09:42:40.681571+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: #011#011 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2025-01-27T09:42:40.681622+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+2025-01-27T09:42:40.681639+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  <head>
+2025-01-27T09:42:40.681658+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:   <title>404 - Not Found</title>
+2025-01-27T09:42:40.681672+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  </head>
+2025-01-27T09:42:40.681687+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  <body>
+2025-01-27T09:42:40.681701+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:   <h1>404 - Not Found</h1>
+2025-01-27T09:42:40.681716+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]:  </body>
+2025-01-27T09:42:40.681731+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: </html>
+2025-01-27T09:42:40.681747+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: #011status code: 404, request id:
+2025-01-27T09:42:40.780798+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: 2025-01-27 09:42:40.7194 ERROR EC2RoleProvider Failed to connect to Systems Manager with SSM role credentials. error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 311141548364
+2025-01-27T09:42:40.780953+00:00 ip-172-31-27-153 amazon-ssm-agent.amazon-ssm-agent[966]: #011status code: 400, request id: d0c66eb8-a5e9-484a-8c13-0367700f6eba
+2025-01-27T09:44:16.004307+00:00 ip-172-31-27-153 systemd[1]: fwupd.service: Deactivated successfully.
+2025-01-27T09:45:01.491796+00:00 ip-172-31-27-153 CRON[6751]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-01-27T09:50:15.239154+00:00 ip-172-31-27-153 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-01-27T09:50:15.248128+00:00 ip-172-31-27-153 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-01-27T09:50:15.249063+00:00 ip-172-31-27-153 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.

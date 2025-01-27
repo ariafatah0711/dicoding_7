@@ -1,3 +1,4 @@
+Started by an SCM change
 Started by user Dicoding Indonesia
 Obtained Jenkinsfile from git https://github.com/ariafatah0711/dicoding_7
 [Pipeline] Start of Pipeline
@@ -18,11 +19,11 @@ Fetching upstream changes from https://github.com/ariafatah0711/dicoding_7
  > git --version # 'git version 2.39.2'
  > git fetch --tags --force --progress -- https://github.com/ariafatah0711/dicoding_7 +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
-Checking out Revision 2091a94f0327d48e9a656d3608241393127e03ec (refs/remotes/origin/master)
+Checking out Revision 6da9b458f58d8c93e8361cd9cae068fec8012e1b (refs/remotes/origin/master)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f 2091a94f0327d48e9a656d3608241393127e03ec # timeout=10
+ > git checkout -f 6da9b458f58d8c93e8361cd9cae068fec8012e1b # timeout=10
 Commit message: "update"
- > git rev-list --no-walk 22632f17e1fb61a50c0f848e47ee0b13b2bb373c # timeout=10
+ > git rev-list --no-walk a2a815540956a7502cd00b540815fb20f5539c0d # timeout=10
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] withEnv
@@ -40,7 +41,7 @@ Jenkins seems to be running inside container 3d1b986c94149539ff7441fdf9f06681367
 but /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah could not be found among []
 but /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp could not be found among []
 $ docker run -t -d -u 1000:1000 --user root -w /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah -v /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah:/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah:rw,z -v /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp:/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.9 cat
-$ docker top 6c50c5625c30984497e3123c2c098a4d8802af394ae2abb36ecc1974a06e3ce2 -eo pid,comm
+$ docker top 59a2b65f89c4ab2b7b27fc8a62cc37f0c69f526e154c1f01b46963b2faebfde1 -eo pid,comm
 [Pipeline] {
 [Pipeline] withEnv
 [Pipeline] {
@@ -56,18 +57,18 @@ $ docker top 6c50c5625c30984497e3123c2c098a4d8802af394ae2abb36ecc1974a06e3ce2 -e
 + pip install pytest
 Collecting pytest
   Downloading pytest-8.3.4-py3-none-any.whl (343 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.1/343.1 kB 4.5 MB/s eta 0:00:00
-Collecting iniconfig
-  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.1/343.1 kB 3.5 MB/s eta 0:00:00
 Collecting pluggy<2,>=1.5
   Downloading pluggy-1.5.0-py3-none-any.whl (20 kB)
-Collecting exceptiongroup>=1.0.0rc8
-  Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
 Collecting packaging
   Downloading packaging-24.2-py3-none-any.whl (65 kB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 4.0 MB/s eta 0:00:00
+Collecting iniconfig
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
 Collecting tomli>=1
   Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
 Installing collected packages: tomli, pluggy, packaging, iniconfig, exceptiongroup, pytest
 Successfully installed exceptiongroup-1.2.2 iniconfig-2.0.0 packaging-24.2 pluggy-1.5.0 pytest-8.3.4 tomli-2.2.1
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
@@ -89,7 +90,7 @@ sources/test_calc.py::TestCalc::test_add_string_and_number PASSED        [ 80%]
 sources/test_calc.py::TestCalc::test_add_strings PASSED                  [100%]
 
 - generated xml file: /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/test-reports/results.xml -
-============================== 5 passed in 0.02s ===============================
+============================== 5 passed in 0.03s ===============================
 Post stage
 [Pipeline] junit
 Recording test results
@@ -110,16 +111,16 @@ Approved by Dicoding Indonesia
 + pip install pyinstaller
 Collecting pyinstaller
   Downloading pyinstaller-6.11.1-py3-none-manylinux2014_x86_64.whl (710 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 710.1/710.1 kB 3.0 MB/s eta 0:00:00
-Collecting importlib-metadata>=4.6
-  Downloading importlib_metadata-8.6.1-py3-none-any.whl (26 kB)
-Collecting pyinstaller-hooks-contrib>=2024.9
-  Downloading pyinstaller_hooks_contrib-2025.0-py3-none-any.whl (344 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 344.7/344.7 kB 7.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 710.1/710.1 kB 4.2 MB/s eta 0:00:00
 Collecting altgraph
   Downloading altgraph-0.17.4-py2.py3-none-any.whl (21 kB)
-Requirement already satisfied: setuptools>=42.0.0 in /usr/local/lib/python3.9/site-packages (from pyinstaller) (58.1.0)
+Collecting pyinstaller-hooks-contrib>=2024.9
+  Downloading pyinstaller_hooks_contrib-2025.0-py3-none-any.whl (344 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 344.7/344.7 kB 6.4 MB/s eta 0:00:00
+Collecting importlib-metadata>=4.6
+  Downloading importlib_metadata-8.6.1-py3-none-any.whl (26 kB)
 Requirement already satisfied: packaging>=22.0 in /usr/local/lib/python3.9/site-packages (from pyinstaller) (24.2)
+Requirement already satisfied: setuptools>=42.0.0 in /usr/local/lib/python3.9/site-packages (from pyinstaller) (58.1.0)
 Collecting zipp>=3.20
   Downloading zipp-3.21.0-py3-none-any.whl (9.6 kB)
 Installing collected packages: altgraph, zipp, importlib-metadata, pyinstaller-hooks-contrib, pyinstaller
@@ -130,30 +131,30 @@ WARNING: Running pip as the 'root' user can result in broken permissions and con
 [notice] To update, run: pip install --upgrade pip
 [Pipeline] sh
 + pyinstaller --onefile sources/add2vals.py
-157 INFO: PyInstaller: 6.11.1, contrib hooks: 2025.0
-157 INFO: Python: 3.9.21
-160 INFO: Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
-160 INFO: Python environment: /usr/local
-161 INFO: wrote /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/add2vals.spec
-164 INFO: Module search paths (PYTHONPATH):
+246 INFO: PyInstaller: 6.11.1, contrib hooks: 2025.0
+246 INFO: Python: 3.9.21
+251 INFO: Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+251 INFO: Python environment: /usr/local
+251 INFO: wrote /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/add2vals.spec
+256 INFO: Module search paths (PYTHONPATH):
 ['/usr/local/lib/python39.zip',
  '/usr/local/lib/python3.9',
  '/usr/local/lib/python3.9/lib-dynload',
  '/usr/local/lib/python3.9/site-packages',
  '/var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/sources']
-339 INFO: checking Analysis
-349 INFO: checking PYZ
-359 INFO: checking PKG
-360 INFO: Building because /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/build/add2vals/localpycs/pyimod01_archive.pyc changed
-360 INFO: Building PKG (CArchive) add2vals.pkg
-5264 INFO: Building PKG (CArchive) add2vals.pkg completed successfully.
-5265 INFO: Bootloader /usr/local/lib/python3.9/site-packages/PyInstaller/bootloader/Linux-64bit-intel/run
-5265 INFO: checking EXE
-5267 INFO: Building because /usr/local/lib/python3.9/site-packages/PyInstaller/bootloader/Linux-64bit-intel/run changed
-5267 INFO: Building EXE from EXE-00.toc
-5270 INFO: Copying bootloader EXE to /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/dist/add2vals
-5271 INFO: Appending PKG archive to custom ELF section in EXE
-5326 INFO: Building EXE from EXE-00.toc completed successfully.
+505 INFO: checking Analysis
+529 INFO: checking PYZ
+543 INFO: checking PKG
+544 INFO: Building because /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/build/add2vals/localpycs/pyimod01_archive.pyc changed
+544 INFO: Building PKG (CArchive) add2vals.pkg
+5281 INFO: Building PKG (CArchive) add2vals.pkg completed successfully.
+5283 INFO: Bootloader /usr/local/lib/python3.9/site-packages/PyInstaller/bootloader/Linux-64bit-intel/run
+5283 INFO: checking EXE
+5283 INFO: Building because /usr/local/lib/python3.9/site-packages/PyInstaller/bootloader/Linux-64bit-intel/run changed
+5284 INFO: Building EXE from EXE-00.toc
+5285 INFO: Copying bootloader EXE to /var/jenkins_home/workspace/submission-cicd-pipeline-ariafatah/dist/add2vals
+5286 INFO: Appending PKG archive to custom ELF section in EXE
+5325 INFO: Building EXE from EXE-00.toc completed successfully.
 [Pipeline] sleep
 Sleeping for 1 min 0 sec
 [Pipeline] sh
@@ -164,7 +165,7 @@ Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB
 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [13.5 kB]
 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [242 kB]
-Fetched 9302 kB in 2s (5207 kB/s)
+Fetched 9302 kB in 5s (2049 kB/s)
 Reading package lists...
 + apt-get install -y sshpass sshpass openssh-client
 Reading package lists...
@@ -178,7 +179,7 @@ Need to get 13.0 kB of archives.
 After this operation, 38.9 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian bookworm/main amd64 sshpass amd64 1.09-1+b1 [13.0 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 13.0 kB in 0s (212 kB/s)
+Fetched 13.0 kB in 0s (176 kB/s)
 Selecting previously unselected package sshpass.
 (Reading database ... 
 (Reading database ... 5%
@@ -215,18 +216,18 @@ Generating public/private rsa key pair.
 Your identification has been saved in /root/.ssh/id_rsa
 Your public key has been saved in /root/.ssh/id_rsa.pub
 The key fingerprint is:
-SHA256:LfXOfKuJSvWAKtcsnFWTLpiiwI6EAYFVTkUfYtEbJbM root@6c50c5625c30
+SHA256:YEKnwjU4jIpZSi32l0hDx4yvVtxoXi3IB1PSXBUvCu4 root@59a2b65f89c4
 The key's randomart image is:
 +---[RSA 2048]----+
-|+o..oo*o+..      |
-|o  o . oo= .     |
-|.   .   Eo=      |
-|o.     o.* o     |
-|oo  . o S = .    |
-|+. . o * + *     |
-|... . * +   = .  |
-|     o o   . o . |
-|        ... o..  |
+| oooBo=....o.    |
+|.==B.O.o    .    |
+|=+*.O X..  . .   |
+|=  + &.*... .    |
+|    * o.S.       |
+|   o ..          |
+|  .    E         |
+|                 |
+|                 |
 +----[SHA256]-----+
 [Pipeline] sh
 + sshpass -p YXJpYQo= ssh-copy-id -o StrictHostKeyChecking=no app_python@ec2-3-93-59-151.compute-1.amazonaws.com
@@ -240,14 +241,18 @@ Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'ap
 and check to make sure that only the key(s) you wanted were added.
 
 [Pipeline] sh
++ ssh app_python@ec2-3-93-59-151.compute-1.amazonaws.com logger Mengirim file dist/add2vals ke server app_python@ec2-3-93-59-151.compute-1.amazonaws.com from Jenkins
+[Pipeline] sh
 + scp dist/add2vals app_python@ec2-3-93-59-151.compute-1.amazonaws.com:/home/app_python
+[Pipeline] sh
++ ssh app_python@ec2-3-93-59-151.compute-1.amazonaws.com logger File Berhasil dikirim ke app_python@ec2-3-93-59-151.compute-1.amazonaws.com
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] }
 [Pipeline] // withEnv
 [Pipeline] }
-$ docker stop --time=1 6c50c5625c30984497e3123c2c098a4d8802af394ae2abb36ecc1974a06e3ce2
-$ docker rm -f --volumes 6c50c5625c30984497e3123c2c098a4d8802af394ae2abb36ecc1974a06e3ce2
+$ docker stop --time=1 59a2b65f89c4ab2b7b27fc8a62cc37f0c69f526e154c1f01b46963b2faebfde1
+$ docker rm -f --volumes 59a2b65f89c4ab2b7b27fc8a62cc37f0c69f526e154c1f01b46963b2faebfde1
 [Pipeline] // withDockerContainer
 [Pipeline] }
 [Pipeline] // withEnv

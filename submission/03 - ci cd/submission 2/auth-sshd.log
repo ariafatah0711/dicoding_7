@@ -23,3 +23,13 @@
 2025-01-27T08:27:46.240286+00:00 ip-172-31-27-153 sshd[5214]: Starting session: command for app_python from 103.154.150.51 port 62246 id 0
 2025-01-27T08:32:23.871100+00:00 ip-172-31-27-153 sshd[5381]: Starting session: command for app_python from 103.154.150.51 port 62323 id 0
 2025-01-27T08:32:27.392196+00:00 ip-172-31-27-153 sshd[5436]: Starting session: subsystem 'sftp' for app_python from 103.154.150.51 port 62336 id 0
+2025-01-27T08:51:10.051999+00:00 ip-172-31-27-153 sshd[5569]: Starting session: command for app_python from 103.154.150.51 port 62217 id 0
+2025-01-27T09:20:32.695114+00:00 ip-172-31-27-153 sshd[5717]: Starting session: shell on pts/0 for app_python from 103.154.150.51 port 6211 id 0
+2025-01-27T09:24:52.823026+00:00 ip-172-31-27-153 sshd[6150]: Starting session: shell on pts/1 for ubuntu from 18.206.107.28 port 58559 id 0
+2025-01-27T09:30:26.359812+00:00 ip-172-31-27-153 sshd[6326]: Starting session: command for app_python from 103.154.150.51 port 6241 id 0
+2025-01-27T09:30:30.465192+00:00 ip-172-31-27-153 sshd[6381]: Starting session: command for app_python from 103.154.150.51 port 6243 id 0
+2025-01-27T09:30:34.182871+00:00 ip-172-31-27-153 sshd[6433]: Starting session: subsystem 'sftp' for app_python from 103.154.150.51 port 6244 id 0
+2025-01-27T09:38:03.271957+00:00 ip-172-31-27-153 sshd[6555]: Starting session: command for app_python from 103.154.150.51 port 6209 id 0
+2025-01-27T09:38:07.286042+00:00 ip-172-31-27-153 sshd[6611]: Starting session: command for app_python from 103.154.150.51 port 6213 id 0
+2025-01-27T09:38:12.066700+00:00 ip-172-31-27-153 sshd[6663]: Starting session: subsystem 'sftp' for app_python from 103.154.150.51 port 6214 id 0
+2025-01-27T09:39:46.102268+00:00 ip-172-31-27-153 sshd[6739]: Starting session: command for app_python from 103.154.150.51 port 6186 id 0

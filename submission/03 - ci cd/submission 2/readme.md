@@ -125,7 +125,7 @@ sshpass -p "YXJpYQo=" ssh -o StrictHostKeyChecking=no app_python@$ip ./add2vals 
 - Tampilan menu “Metric Explorer” pada halaman Prometheus
   ![alt text](docs/images/image-3.png)
 - Tampilan “Grafana dashboard” yang Anda buat untuk Jenkins metrics.
-  ![alt text](docs/images/image-4.png)
+  ![alt text](docs/images/image-6.png)
 
 ## more
 - Lampirkan berkas log.txt yang Anda unduh dari halaman Artifacts pada Blue Ocean.
@@ -139,5 +139,5 @@ sshpass -p "YXJpYQo=" ssh -o StrictHostKeyChecking=no app_python@$ip ./add2vals 
 ### Python App dan Java App
 - Lampirkan berkas System log dari EC2 instance Anda. Berkas ini dapat diunduh dari halaman EC2 -> Instances -> centang instance Anda -> Actions -> Monitor and troubleshoot -> Get system log -> Download. Itu akan mengunduh sebuah berkas dengan nama <instanceID>.log.
   - [./i-0b31d91e222b12802.log](./i-0b31d91e222b12802.log)
-  - [./auth-sshd.log](./auth-sshd.log)
   - [./syslog](./syslog)
+  - [./auth-sshd.log](./auth-sshd.log)

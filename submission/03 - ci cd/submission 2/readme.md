@@ -92,8 +92,8 @@ docker restart prometheus
 
 ## check the app
 ```bash
-sshpass -p "YXJpYQo=" ssh app_python@18.215.145.93 ls
-sshpass -p "YXJpYQo=" ssh app_python@18.215.145.93 ./add2vals 5 10
+sshpass -p "YXJpYQo=" ssh app_python@ec2-54-242-218-252.compute-1.amazonaws.com ls
+sshpass -p "YXJpYQo=" ssh app_python@ec2-54-242-218-252.compute-1.amazonaws.com ./add2vals 5 10
 ```
 
 ## images

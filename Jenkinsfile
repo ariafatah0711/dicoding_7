@@ -57,6 +57,7 @@ pipeline {
 
                     // deploy to ec2
                     // sh "scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
+                    sh "sshpass -p '$EC2_PASS' ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP rm add2vals"
                     sh "sshpass -p '$EC2_PASS' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
                 }
             }

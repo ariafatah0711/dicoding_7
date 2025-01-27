@@ -90,6 +90,20 @@ EOF'
 docker restart prometheus
 ```
 
+# setup aws ec2
+## setup new_user
+```bash
+new_user=app_python
+pass="YXJpYQo="
+# pass="data"
+
+sudo useradd -m -s /bin/bash $new_user
+echo "$new_user:$pass" | sudo chpasswd
+echo "PasswordAuthentication yes" | sudo tee /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+sudo systemctl restart ssh
+sudo systemctl restart sshd
+```
+
 ## check the app
 ```bash
 ip=ec2-3-93-59-151.compute-1.amazonaws.com
@@ -103,4 +117,24 @@ sshpass -p "YXJpYQo=" ssh -o StrictHostKeyChecking=no app_python@$ip ./add2vals 
 - Tampilan halaman “Jenkins Dashboard”.
   ![alt text](docs/images/image.png)
 - Tampilan halaman “Detail” dari proses eksekusi pipeline yang terbaru di Blue Ocean (wajib berisi tahapan Build, Test, Manual Approval, dan Deploy).
-  
+  ![alt text](docs/images/image-1.png)
+- Tampilan bagian “Prometheus” pada halaman Configure Systems di Jenkins.
+  ![alt text](docs/images/image-2.png)
+- Tampilan menu “Metric Explorer” pada halaman Prometheus
+  ![alt text](docs/images/image-3.png)
+- Tampilan “Grafana dashboard” yang Anda buat untuk Jenkins metrics.
+  ![alt text](docs/images/image-4.png)
+
+## more
+- Lampirkan berkas log.txt yang Anda unduh dari halaman Artifacts pada Blue Ocean.
+  - [./log.txt](./log.txt)
+
+## saran 1-2
+- Jika Anda menerapkan saran pertama dan/atau kedua; lampirkan juga screenshot yang menampilkan menu Containers pada Docker Desktop atau output dari dari perintah “docker ps” di Terminal.
+  ![alt text](docs/images/image-5.png)
+
+## saran 3
+### Python App dan Java App
+- Lampirkan berkas System log dari EC2 instance Anda. Berkas ini dapat diunduh dari halaman EC2 -> Instances -> centang instance Anda -> Actions -> Monitor and troubleshoot -> Get system log -> Download. Itu akan mengunduh sebuah berkas dengan nama <instanceID>.log.
+  - [./i-0b31d91e222b12802.log](./i-0b31d91e222b12802.log)
+  - [./auth-sshd.log](./auth-sshd.log)

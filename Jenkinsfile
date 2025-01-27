@@ -4,7 +4,8 @@
 pipeline {
     environment {
         EC2_USER = 'app_python' // dont use user sudoers
-        EC2_IP = 'ec2-54-242-218-252.compute-1.amazonaws.com'
+        // EC2_IP = 'ec2-54-242-218-252.compute-1.amazonaws.com'
+        EC2_IP = 'ec2-184-73-117-105.compute-1.amazonaws.com'
         // PEM_FILE = './key/id_rsa'
         EC2_PASS = 'YXJpYQo='
     }
@@ -46,7 +47,7 @@ pipeline {
             steps {
                 sh "pip install pyinstaller"
                 sh "pyinstaller --onefile sources/add2vals.py" 
-                sleep(time:1, unit: "MINUTES")
+                // sleep(time:1, unit: "MINUTES")
 
                 sh 'apt-get update && apt-get install -y sshpass sshpass openssh-client'
             }
@@ -57,8 +58,11 @@ pipeline {
 
                     // deploy to ec2
                     // sh "scp -i $PEM_FILE dist/add2vals.py $EC2_USER@$EC2_IP:/home/$EC2_USER"
-                    sh "sshpass -p '$EC2_PASS' ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP rm add2vals"
-                    sh "sshpass -p '$EC2_PASS' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
+                    sh 'ssh-keygen -t rsa -b 2048 -f /tmp/id_rsa -N ""'
+                    sh "sshpass -p '$EC2_PASS' ssh-copy-id -i /tmp/id_rsa.pub -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP"
+                    sh "scp -i /tmp/id_rsa dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
+
+                    // sh "sshpass -p '$EC2_PASS' scp -o StrictHostKeyChecking=no dist/add2vals $EC2_USER@$EC2_IP:/home/$EC2_USER"
                 }
             }
         }

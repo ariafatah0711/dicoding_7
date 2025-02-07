@@ -17,6 +17,10 @@ and execute at the command line on Linux machines without Python.
 The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial.
 
+- [https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/](https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/)
+- [https://www.jenkins.io/doc/pipeline/examples/](https://www.jenkins.io/doc/pipeline/examples/)
+
+# jenkins
 ## setup jenkins with docker (1)
 ### setup container
 ```bash
@@ -56,7 +60,7 @@ docker run \
   myjenkins-blueocean:2.426.2-1 
 ```
 
-## setup jenkins with docker compose (2)
+## setup all with docker compose
 ```bash
 # start
 docker-compose up -d
@@ -80,3 +84,30 @@ docker-compose down
 - Install suggested plugins
 - create user
 - save and finish
+
+# Grafana dan Prometheus
+## setup
+```bash
+docker rm -fv prometheus grafana
+
+docker run -d --name prometheus -p 9091:9090 --add-host=host.docker.internal:host-gateway prom/prometheus
+docker run -d --name grafana -p 3031:3031 -e "GF_SERVER_HTTP_PORT=3031" --add-host=host.docker.internal:host-gateway grafana/grafana
+
+# docker exec -it prometheus sh
+# ---
+# cat >> /etc/prometheus/prometheus.yml << EOF
+#   - job_name: "jenkins"                                                        
+#     metrics_path: /prom                                             
+#     static_configs:                                                            
+#       - targets: ["host.docker.internal:49000"]
+# EOF
+
+docker exec -it prometheus sh -c 'cat >> /etc/prometheus/prometheus.yml << EOF
+  - job_name: "jenkins"
+    metrics_path: /prom
+    static_configs:
+      - targets: ["host.docker.internal:49000"]
+EOF'
+
+docker restart prometheus
+```

@@ -47,16 +47,39 @@ services:
     image: nginx
     container_name: nginx-reverse-proxy
     volumes:
-      - ./nginx/:/etc/nginx/sites-available/
+      # - ./nginx/:/etc/nginx/sites-available/
       - ./nginx/:/etc/nginx/conf.d
     networks:
       - jenkins
     ports:
       - 9000:80
 
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9091:9090"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: always
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3031:3031"
+    environment:
+      - GF_SERVER_HTTP_PORT=3031
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+
 volumes:
   jenkins-docker-certs:
   jenkins-data:
+  prometheus_data:
 
 networks:
   jenkins:

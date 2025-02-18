@@ -1,11 +1,7 @@
-# submission 2
-## run
-```bash
-cat > hapus-log.sh << EOF
 #!/bin/bash
 
 lanjut="y"
-while [ \$lanjut == "y" ] ; do
+while [ $lanjut == "y" ] ; do
         clear
         echo
         echo "                 *                "
@@ -36,8 +32,3 @@ while [ \$lanjut == "y" ] ; do
         echo "lanjut (y/n)? "
         read lanjut
 done
-EOF
-
-chmod +x hapus-log.sh
-./hapus-log.sh
-```

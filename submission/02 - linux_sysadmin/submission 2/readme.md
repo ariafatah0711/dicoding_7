@@ -38,6 +38,9 @@ journalctl -b -u sshd -n 50 -o json-pretty > log-ssh.json
 ## Membuat berkas daftar-user.txt.gpg (hasil enkripsi dari berkas daftar-user.txt).
 ```bash
 gpg -c daftar-user.txt
+
+gpg daftar-user.txt 
+# 123
 ```
 
 ## Membuat berkas shell script bernama hapus-log.sh dengan ketentuan berikut.

@@ -1,0 +1,50 @@
+Feb 19 08:53:33 localhost.localdomain systemd[1]: sshd.service: Main process exited, code=exited, status=255/EXCEPTION
+Feb 19 08:53:33 localhost.localdomain systemd[1]: sshd.service: Failed with result 'exit-code'.
+Feb 19 08:53:33 localhost.localdomain systemd[1]: Failed to start OpenSSH server daemon.
+Feb 19 08:54:12 localhost.localdomain systemd[1]: Stopped OpenSSH server daemon.
+Feb 19 08:54:12 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Feb 19 08:54:12 localhost.localdomain sshd[1480]: error: Bind to port 2000 on 0.0.0.0 failed: Permission denied.
+Feb 19 08:54:12 localhost.localdomain sshd[1480]: fatal: Cannot bind any address.
+Feb 19 08:54:12 localhost.localdomain systemd[1]: sshd.service: Main process exited, code=exited, status=255/EXCEPTION
+Feb 19 08:54:12 localhost.localdomain systemd[1]: sshd.service: Failed with result 'exit-code'.
+Feb 19 08:54:12 localhost.localdomain systemd[1]: Failed to start OpenSSH server daemon.
+Feb 19 08:54:54 localhost.localdomain systemd[1]: sshd.service: Scheduled restart job, restart counter is at 8.
+Feb 19 08:54:54 localhost.localdomain systemd[1]: Stopped OpenSSH server daemon.
+Feb 19 08:54:54 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Feb 19 08:54:54 localhost.localdomain sshd[1497]: error: Bind to port 2000 on 0.0.0.0 failed: Permission denied.
+Feb 19 08:54:54 localhost.localdomain sshd[1497]: fatal: Cannot bind any address.
+Feb 19 08:54:54 localhost.localdomain systemd[1]: sshd.service: Main process exited, code=exited, status=255/EXCEPTION
+Feb 19 08:54:54 localhost.localdomain systemd[1]: sshd.service: Failed with result 'exit-code'.
+Feb 19 08:54:54 localhost.localdomain systemd[1]: Failed to start OpenSSH server daemon.
+Feb 19 08:55:36 localhost.localdomain systemd[1]: sshd.service: Scheduled restart job, restart counter is at 9.
+Feb 19 08:55:36 localhost.localdomain systemd[1]: Stopped OpenSSH server daemon.
+Feb 19 08:55:36 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Feb 19 08:55:36 localhost.localdomain sshd[1511]: error: Bind to port 2000 on 0.0.0.0 failed: Permission denied.
+Feb 19 08:55:36 localhost.localdomain sshd[1511]: fatal: Cannot bind any address.
+Feb 19 08:55:36 localhost.localdomain systemd[1]: sshd.service: Main process exited, code=exited, status=255/EXCEPTION
+Feb 19 08:55:36 localhost.localdomain systemd[1]: sshd.service: Failed with result 'exit-code'.
+Feb 19 08:55:36 localhost.localdomain systemd[1]: Failed to start OpenSSH server daemon.
+Feb 19 08:56:11 localhost.localdomain systemd[1]: Stopped OpenSSH server daemon.
+Feb 19 08:56:11 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Feb 19 08:56:11 localhost.localdomain sshd[1535]: Server listening on 0.0.0.0 port 2000.
+Feb 19 08:56:11 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+Feb 19 08:56:21 localhost.localdomain sshd[1536]: Accepted publickey for dicoding from 192.168.1.7 port 61011 ssh2: RSA SHA256:Bs+YmKm4r2QdRZr/QLv2BKHo7F6K2t2ZNMbif/3g56o
+Feb 19 08:56:21 localhost.localdomain sshd[1536]: pam_unix(sshd:session): session opened for user dicoding(uid=1001) by (uid=0)
+Feb 19 08:58:12 localhost.localdomain sshd[1584]: Connection reset by authenticating user dicoding 192.168.1.7 port 61028 [preauth]
+Feb 19 08:58:22 localhost.localdomain sshd[1586]: Accepted publickey for dicoding from 192.168.1.7 port 61029 ssh2: RSA SHA256:Bs+YmKm4r2QdRZr/QLv2BKHo7F6K2t2ZNMbif/3g56o
+Feb 19 08:58:22 localhost.localdomain sshd[1586]: pam_unix(sshd:session): session opened for user dicoding(uid=1001) by (uid=0)
+Feb 19 08:58:36 localhost.localdomain sshd[1633]: Accepted publickey for aria from 192.168.1.7 port 61030 ssh2: RSA SHA256:Bs+YmKm4r2QdRZr/QLv2BKHo7F6K2t2ZNMbif/3g56o
+Feb 19 08:58:36 localhost.localdomain sshd[1633]: pam_unix(sshd:session): session opened for user aria(uid=1000) by (uid=0)
+Feb 19 09:01:50 localhost.localdomain systemd[1]: Stopping OpenSSH server daemon...
+Feb 19 09:01:50 localhost.localdomain sshd[1535]: Received signal 15; terminating.
+Feb 19 09:01:50 localhost.localdomain systemd[1]: sshd.service: Deactivated successfully.
+Feb 19 09:01:50 localhost.localdomain systemd[1]: Stopped OpenSSH server daemon.
+Feb 19 09:01:50 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Feb 19 09:01:50 localhost.localdomain sshd[1778]: Server listening on 0.0.0.0 port 2000.
+Feb 19 09:01:50 localhost.localdomain sshd[1778]: Server listening on :: port 2000.
+Feb 19 09:01:50 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+Feb 19 09:05:57 localhost.localdomain sshd[1841]: Accepted publickey for dicoding from 192.168.1.7 port 61101 ssh2: RSA SHA256:Bs+YmKm4r2QdRZr/QLv2BKHo7F6K2t2ZNMbif/3g56o
+Feb 19 09:05:57 localhost.localdomain sshd[1841]: pam_unix(sshd:session): session opened for user dicoding(uid=1001) by (uid=0)
+Feb 19 09:05:57 localhost.localdomain sshd[1841]: pam_unix(sshd:session): session closed for user dicoding
+Feb 19 09:07:02 localhost.localdomain sshd[1880]: Accepted publickey for aria from 192.168.1.7 port 61122 ssh2: RSA SHA256:Bs+YmKm4r2QdRZr/QLv2BKHo7F6K2t2ZNMbif/3g56o
+Feb 19 09:07:02 localhost.localdomain sshd[1880]: pam_unix(sshd:session): session opened for user aria(uid=1000) by (uid=0)
